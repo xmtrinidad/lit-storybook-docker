@@ -1,0 +1,25 @@
+{
+  "scripts": {
+    "storybook": "start-storybook",
+    "storybook:build": "build-storybook",
+    "build": "rimraf dist && rollup -c rollup.config.js",
+    "start:build": "npm run build && es-dev-server --root-dir dist --app-index index.html --open --compatibility none",
+    "start": "es-dev-server --app-index index.html --node-resolve --watch"
+  },
+  "devDependencies": {
+    "@open-wc/demoing-storybook": "^2.0.0",
+    "@open-wc/building-rollup": "^1.0.0",
+    "rimraf": "^2.6.3",
+    "rollup": "^2.3.4",
+    "es-dev-server": "^1.5.0"
+  },
+  "name": "my-app",
+  "version": "0.0.0",
+  "description": "Webcomponent my-app following open-wc recommendations",
+  "author": "my-app",
+  "license": "MIT",
+  "dependencies": {
+    "lit-html": "^1.0.0",
+    "lit-element": "^2.0.1"
+  }
+}
